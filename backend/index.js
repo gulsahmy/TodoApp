@@ -15,11 +15,14 @@ require('../backend/src/configs/dbConnection')()
 //* Middleware
 app.use(express.json())
 
+const cors = require('cors')
+app.use(cors({origin:'http://localhost:3000'}))
+
 
 app.all('/', (req, res) => {
     res.send({
         error: false,
-        message: 'Welcome to the backend of the application'
+        message: 'Welcome to TODO API'
     })
 })
 
@@ -27,5 +30,5 @@ app.use('/todo', require('./src/router/todo'))
 
 app.use(require('./src/middlewares/errorHandler'))
 
-app.listen(PORT, () => console.log('listening at http://127.0.0.1:' + PORT))
+app.listen(PORT, () => console.log('Listening at http://127.0.0.1:' + PORT))
 

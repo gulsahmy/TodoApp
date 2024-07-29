@@ -11,9 +11,11 @@
   "license": "ISC",
   "description": "This is full stack todo API with MongoDB",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-async-errors": "^3.1.1",
-    "mongoose": "^8.5.1"
+    "mongoose": "^8.5.1",
+    "react-scripts": "^3.0.1"
   }
 }
